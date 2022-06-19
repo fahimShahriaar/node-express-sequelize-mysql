@@ -21,10 +21,10 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
 sequelize
   .authenticate()
   .then(() => {
-    console.log("Connection has been established successfully.");
+    log.green("Connection has been established successfully.");
   })
   .catch((err) => {
-    console.log("Unable to connect to the database:", err);
+    log.red("Unable to connect to the database:", err);
   });
 
 const db = {};
