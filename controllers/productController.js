@@ -46,8 +46,6 @@ const getSingleProduct = async (req, res, next) => {
 
 // Update a product
 const updateProduct = async (req, res, next) => {
-  //   console.log("hit for update");
-  log.green("hit for update");
   try {
     const id = req.params.id;
     const product = await Product.update(req.body, { where: { id: id } });
